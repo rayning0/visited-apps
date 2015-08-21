@@ -44,3 +44,8 @@ group :development, :test do
 end
 
 gem 'rspec-rails'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'omniauth-google-oauth2'

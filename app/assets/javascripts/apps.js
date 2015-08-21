@@ -3,23 +3,19 @@
  ****************/
 
 var targets = [
-  { 'category': 'Search engines' },
-
-  { 'name': 'Google', 'urls': ['https://www.google.com/images/srpr/logo11w.png'] },
-
   { 'category': 'Social networks' },
 
-  { 'name': 'Facebook', 'urls': ['https://fbstatic-a.akamaihd.net/rsrc.php/v2/yU/r/n93MoBZD7fU.png'] },
+  { 'name': 'Facebook', 'urls': ['https://fbstatic-a.akamaihd.net/rsrc.php/v2/yf/r/wFSNrk6UZBA.css'] },
 
   { 'name': 'Twitter', 'urls': ['https://abs.twimg.com/a/1440037003/css/t1/twitter_core.bundle.css'] },
 
   { 'category': 'Content platforms' },
 
+  { 'name': 'Aol', 'urls': ['http://portal.aolcdn.com/p5/_v121.2.0/css/responsive.css'] },
+
   { 'name': 'Youtube', 'urls': ['https://s.ytimg.com/yts/cssbin/www-core-2x-webp-vfl8SfP4I.css'] },
 
-  { 'category': 'Online media' },
-
-  { 'name': 'New York Times', 'urls': ['http://a1.nyt.com/assets/homepage/20150817-141218/js/foundation/lib/framework.js'] }
+  { 'name': 'Yahoo', 'urls': ['https://www.yahoo.com/sy/zz/combo?&nn/lib/metro/g/masthead/masthead_sayt_0.0.24.css'] }
 ];
 
 
