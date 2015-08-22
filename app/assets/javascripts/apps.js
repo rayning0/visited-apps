@@ -220,8 +220,6 @@ function maybe_test_next() {
 
     document.getElementById('btn').disabled = false;
 
-    document.getElementById('survey').style.display = 'inline';
-
   }
 
 }
@@ -255,16 +253,4 @@ function start_stuff() {
 
   maybe_test_next();
 
-}
-
-
-/* Survey helper. */
-
-function survey(answer) {
-  var x = new XMLHttpRequest();
-  x.open('GET', 'survey.cgi?' + answer, false);
-  x.send(null);
-  alert('Thanks for the feedback!');
-  document.getElementById('survey').style.display = 'none';
-  return false;
 }
