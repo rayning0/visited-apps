@@ -11,11 +11,13 @@ var targets = [
 
   { 'category': 'Content platforms' },
 
-  { 'name': 'Aol', 'urls': ['http://portal.aolcdn.com/p5/_v121.2.0/css/responsive.css'] },
+  { 'name': 'Google News', 'urls': ['https://plus.google.com/_/scs/apps-static/_/ss/k=oz.sbw_bss.kya3c9o2hlu5.L.W.O/d=0/rs=AGLTcCOylmQS35cyWJe94iYUTjf3SUjNxw'] },
 
-  { 'name': 'Youtube', 'urls': ['https://s.ytimg.com/yts/cssbin/www-core-2x-webp-vfl8SfP4I.css'] },
+  { 'name': 'Google', 'urls': ['https://www.google.com/images/srpr/logo11w.png'] },
 
-  { 'name': 'Yahoo', 'urls': ['https://www.yahoo.com/sy/zz/combo?&nn/lib/metro/g/masthead/masthead_sayt_0.0.24.css'] }
+  { 'category': 'Government' },
+
+  { 'name': 'IRS', 'urls': ['http://www.irs.gov/static_assets/css/style.css'] }
 ];
 
 
