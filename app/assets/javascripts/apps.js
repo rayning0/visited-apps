@@ -3,19 +3,14 @@
  ****************/
 
 var targets = [
-  { 'category': 'Social networks' },
 
   { 'name': 'Facebook', 'urls': ['https://fbstatic-a.akamaihd.net/rsrc.php/v2/yf/r/wFSNrk6UZBA.css'] },
 
   { 'name': 'Twitter', 'urls': ['https://abs.twimg.com/a/1440037003/css/t1/twitter_core.bundle.css'] },
 
-  { 'category': 'Content platforms' },
-
-  { 'name': 'Google News', 'urls': ['https://plus.google.com/_/scs/apps-static/_/ss/k=oz.sbw_bss.kya3c9o2hlu5.L.W.O/d=0/rs=AGLTcCOylmQS35cyWJe94iYUTjf3SUjNxw'] },
+  { 'name': 'Time.gov', 'urls': ['http://www.time.gov/lps/includes/embed-compressed.js'] },
 
   { 'name': 'Google', 'urls': ['https://www.google.com/images/srpr/logo11w.png'] },
-
-  { 'category': 'Government' },
 
   { 'name': 'IRS', 'urls': ['http://www.irs.gov/static_assets/css/style.css'] }
 ];
@@ -178,14 +173,6 @@ function maybe_test_next() {
 
   if (target_off < targets.length) {
 
-    if (targets[target_off].category) {
-
-      log_text(targets[target_off].category + ':', 'p', 'category');
-      target_off++;
-
-    }
-
-
     if (confirmed_visited) {
 
       log_text('Visited: ' + current_name + ' [' + cycles + ':' + attempt + ']', 'li', 'visited');
@@ -240,6 +227,8 @@ function start_stuff() {
           'http://lcamtuf.coredump.cx/cachetime/');
 
   }
+
+
 
   target_off = 0;
   attempt = 0;

@@ -4,4 +4,15 @@
 # Examples:
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+
+apps = [
+  %w(Facebook https://fbstatic-a.akamaihd.net/rsrc.php/v2/yf/r/wFSNrk6UZBA.css),
+  %w(Twitter https://abs.twimg.com/a/1440037003/css/t1/twitter_core.bundle.css),
+  %w(Time.gov http://www.time.gov/lps/includes/embed-compressed.js),
+  %w(Google https://www.google.com/images/srpr/logo11w.png),
+  %w(IRS http://www.irs.gov/static_assets/css/style.css)
+]
+
+apps.each do |name, url|
+  App.create(name: name, url: url)
+end
