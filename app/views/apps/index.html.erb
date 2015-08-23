@@ -1,11 +1,11 @@
-<h3>Visited Sites: rapid history extraction through non-destructive cache timing</h3>
+<h3>Visited Sites: tells which sites you visited before by checking loading speeds (<%= link_to 'original JS code', 'http://lcamtuf.coredump.cx/cachetime' %>)</h3>
 
 <ol>
   <h4>To Test This:</h4>
   <li>Clear browser cache</li>
   <li>Reload this page</li>
-  <li>Open a few sites (from AOL, Facebook, Twitter, Yahoo, YouTube)</li>
-  <li>Click "Do the thing already!"</li>
+  <li>Open a few sites (like Facebook, Twitter, Time.gov, Google, IRS)</li>
+  <li>Click "Check Visited Sites"</li>
 </ol>
 
 <ol>
@@ -16,13 +16,49 @@
   <li>Log into the different account you wanted</li>
 </ol>
 
-<span style="color: steelblue">
-The use of script-blocking tools, having unusually slow or unusually fast hardware, or doing computationally expensive work in the background, seem to be the primary reasons for failure. Please refer to the <a href=".">top-level page</a> for more
-information about the purpose and the design of this tool.
-</span>
-<p><br>
+<%= form_tag update_individual_apps_path, method: :put do %>
+  <table style="margin: 0px auto;">
+    <h4 style="text-align: center;">Check These Sites</h4>
+    <tr>
+      <th>Name</th>
+      <th>URL</th>
+    </tr>
 
-<input id=btn type=submit onclick="start_stuff()" value="Do the thing already!">
+    <% @apps.each do |app| %>
+      <%= fields_for 'apps[]', app do |f| %>
+
+        <tr>
+          <td>
+            <%= f.text_field :name %>
+          </td>
+          <td>
+            <%= f.text_field :url, size: 60 %>
+          </td>
+          <td>
+            <%= link_to 'Delete', app, data: {confirm: 'Are you sure?'}, method: :delete, class: 'btn btn-default' %>
+          </td>
+        </tr>
+
+      <% end %>
+    <% end %>
+
+    <tr>
+      <td>
+        <%= submit_tag 'Save', class: 'btn btn-primary' %>
+        <%= link_to 'Add Site', new_app_path, class: 'btn btn-default' %>
+      </td>
+    </tr>
+
+  </table>
+<% end %>
+
+<br>
+<span style="color: steelblue">
+The use of script-blocking tools, having unusually slow or unusually fast hardware, or doing computationally expensive work in the background, seem to be the primary reasons for failure.
+</span>
+<br><br>
+
+<input id=btn type=submit onclick="start_stuff()" value="Check Visited Sites" class="btn btn-primary">
 <p>
 <h5>The sites you have visited in the past day or so are shown in <font color=green>green</font>; <font color=gray>gray</font> indicates
 a site <u>not</u> found in your cache:</h5>

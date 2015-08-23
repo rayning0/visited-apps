@@ -1,0 +1,16 @@
+<br><br>
+<%= form_for :app, url: apps_path do |f| %>
+  <table>
+    <tr>
+      <td>
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+      </td>
+      <td style='padding: 15px;'>
+        <%= f.label :url %><br>
+        <%= f.text_field :url, size: 70 %>
+      </td>
+    </tr>
+  </table>
+  <p><%= f.submit %></p>
+<% end %>

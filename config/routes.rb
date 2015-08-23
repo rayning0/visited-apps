@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { omniauth_callbacks: "callbacks" }
-  resources :apps
   root 'apps#index'
+  devise_for :users, controllers: { omniauth_callbacks: "callbacks" }
+
+  resources :apps, except: [:show, :edit, :update] do
+    collection do
+      post :edit_individual
+      put :update_individual
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

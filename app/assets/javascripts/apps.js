@@ -228,8 +228,6 @@ function start_stuff() {
 
   }
 
-
-
   target_off = 0;
   attempt = 0;
   confirmed_visited = false;
