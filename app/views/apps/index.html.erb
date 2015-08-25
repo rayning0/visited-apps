@@ -16,12 +16,15 @@
   <li>Log into the different account you wanted</li>
 </ol>
 
+<%= content_tag 'div', id: 'apps', data: {sites: @apps.select(:name, :urls)} do %>
+<% end %>
+
 <%= form_tag update_individual_apps_path, method: :put do %>
   <table style="margin: 0px auto;">
     <h4 style="text-align: center;">Check These Sites</h4>
     <tr>
       <th>Name</th>
-      <th>URL</th>
+      <th>URLs</th>
     </tr>
 
     <% @apps.each do |app| %>
@@ -32,7 +35,7 @@
             <%= f.text_field :name %>
           </td>
           <td>
-            <%= f.text_field :url, size: 60 %>
+            <%= f.text_field :urls, size: 60 %>
           </td>
           <td>
             <%= link_to 'Delete', app, data: {confirm: 'Are you sure?'}, method: :delete, class: 'btn btn-default' %>

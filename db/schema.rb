@@ -15,9 +15,9 @@ ActiveRecord::Schema.define(version: 20150822104110) do
 
   create_table "apps", force: :cascade do |t|
     t.string   "name"
-    t.string   "url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "urls",       default: "--- []\n"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
   end
 
   add_index "apps", ["name"], name: "index_apps_on_name"

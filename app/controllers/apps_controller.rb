@@ -1,5 +1,6 @@
 class AppsController < ApplicationController
   before_action :get_app, only: [:destroy]
+  respond_to :html, :js
 
   def index
     @apps = App.all
@@ -36,7 +37,7 @@ class AppsController < ApplicationController
   private
 
   def app_params
-    params.require(:app).permit(:name, :url)
+    params.require(:app).permit(:name, :urls)
   end
 
   def get_app
